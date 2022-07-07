@@ -6,6 +6,7 @@ import status  from '../helpers/status-codes'
 const { CREATED, OK, BAD_REQUEST, UNAUTHORIZED } = status;
 
 export const signup = async (req, res) => {
+    console.log("in signup...")
     const { name, email, password } = req.body;
     
     const userExists = await _userExists(email);
